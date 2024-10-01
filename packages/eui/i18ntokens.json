@@ -6017,14 +6017,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 48,
+        "line": 49,
         "column": 29,
-        "index": 1388
+        "index": 1421
       },
       "end": {
-        "line": 51,
+        "line": 52,
         "column": 3,
-        "index": 1451
+        "index": 1484
       }
     },
     "filepath": "src/components/search_bar/search_box.tsx"
@@ -6035,14 +6035,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 52,
+        "line": 53,
         "column": 31,
-        "index": 1484
+        "index": 1517
       },
       "end": {
-        "line": 55,
+        "line": 56,
         "column": 3,
-        "index": 1638
+        "index": 1671
       }
     },
     "filepath": "src/components/search_bar/search_box.tsx"
@@ -6053,14 +6053,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 56,
+        "line": 57,
         "column": 25,
-        "index": 1665
+        "index": 1698
       },
       "end": {
-        "line": 59,
+        "line": 60,
         "column": 3,
-        "index": 1814
+        "index": 1847
       }
     },
     "filepath": "src/components/search_bar/search_box.tsx"
