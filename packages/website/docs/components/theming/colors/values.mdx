@@ -12,6 +12,10 @@ Colors are defined to work well when combined for their semantic purpose.
 
 When switching between light and dark color modes, the theme keys do not change, only their values do.
 
+import ForcedColorsWarning from './_forced_colors_warning.mdx';
+
+<ForcedColorsWarning />
+
 ## Brand colors
 
 Elastic has two main brand colors. The other three are used for statefulness like indicating between successful and dangerous actions.
@@ -44,7 +48,7 @@ import { BrandColorsTable } from './brand_colors_table';
 
 ## Text colors
 
-Each brand color also has a corresponding text variant that should be used specifically when coloring text. As is used in [**EuiTextColor**](/docs/display/text#coloring-text).
+Each brand color also has a corresponding text variant that should be used specifically when coloring text. As is used in [EuiTextColor](../../display/text.mdx#coloring-text).
 
 import { TextColorPreview } from './text_color_preview';
 import { TextColorsTable } from './text_colors_table';
@@ -143,7 +147,7 @@ import { ShadeColorsTable } from './shade_colors_table';
 
     Since the EUI colors usually evaluate to a hex value, the easiest way to perform color operations like transparency, shading, or tinting is by using the EUI provided methods of `transparentize()`, `shade()`, and `tint()` respectively.
 
-    For all available color functions see the [Colors Utilities page](/docs/theming/colors/utilities).
+    For all available color functions see the [Colors Utilities page](./utilities.mdx).
   </Example.Description>
   <Example.Preview>
     <ShadeColorPreview />
@@ -193,9 +197,30 @@ import { SpecialColorsTable } from './special_colors_table';
 
 ## Data visualization colors
 
-import { DataVisColorsTable, DataVisColorsBehindTextColorsTable } from './data_vis_colors_table';
+import { DataVisColorsTable, DataVisColorsBehindTextColorsTable, DataVisBackgroundColor } from './data_vis_colors_table';
+import { DataVisColorsPreview } from './data_vis_colors_preview'
 
-### `euiTheme.colors.vis[token]` <Badge color="hollow">token</Badge>
+
+<Example>
+  <Example.Description>
+    ### `euiTheme.colors.vis[token]` <Badge color="hollow">token</Badge>
+
+    The following colors are color-blind safe and should be used in categorically seried visualizations and graphics. 
+    They are meant to be contrasted against the value of <DataVisBackgroundColor /> for the current theme.
+  </Example.Description>
+  <Example.Preview>
+    <DataVisColorsPreview />
+  </Example.Preview>
+  <Example.Snippet>
+    ```
+    css`
+      background-color: ${euiTheme.colors.vis.euiColorVis0};
+    `
+    ```
+  </Example.Snippet>
+</Example>
+
+<EuiSpacer />
 
 <DataVisColorsTable />
 <DataVisColorsBehindTextColorsTable />

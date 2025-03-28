@@ -56,12 +56,13 @@ export interface DemoProps extends PropsWithChildren {
 
 const getDemoStyles = (euiTheme: UseEuiTheme) => ({
   demo: css`
-    --docs-demo-border-color: ${euiTheme.euiTheme.colors.lightShade};
+    --docs-demo-border-color: ${euiTheme.euiTheme.border.color};
     --docs-demo-border-radius: ${euiTheme.euiTheme.size.s};
 
     border: 1px solid var(--docs-demo-border-color);
     border-radius: var(--docs-demo-border-radius);
     margin-block: ${euiTheme.euiTheme.size.xl};
+    word-break: break-word;
   `,
 });
 
