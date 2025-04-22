@@ -1,3 +1,54 @@
+## [`v101.4.0`](https://github.com/elastic/eui/releases/v101.4.0)
+
+- Spread `labelProps` to the `label` element in `EuiCheckableCard` ([#8586](https://github.com/elastic/eui/pull/8586))
+- Add `controls`, `flask`, `comment`, and `readOnly` glyphs to `EuiIcon` ([#8580](https://github.com/elastic/eui/pull/8580))
+- Refactored `EuiExpression`, `EuiFacetGroup`, `EuiFacetButton`, `EuiFilterGroup`, `EuiHeader`, `EuiImage` and `EuiListGroup` to memoize their internal Emotion styles ([#8565](https://github.com/elastic/eui/pull/8565))
+- Updated global `border.radius.medium` token value for default `Borealis` theme to `4px` ([#8563](https://github.com/elastic/eui/pull/8563))
+- Updated `EuiProvider` to build themes including `highContrastMode` ([#8558](https://github.com/elastic/eui/pull/8558))
+
+**Accessibility**
+
+- Removed the `aria-label` attribute from the `ul` element in `EuiPagination` to avoid duplicate screen reader output ([#8597](https://github.com/elastic/eui/pull/8597))
+- Set a more specific `aria-current="page"` on list items in `EuiPagination` ([#8597](https://github.com/elastic/eui/pull/8597))
+- Added `aria-modal` to `EuiFlyout` with `type="overlay"` ([#8591](https://github.com/elastic/eui/pull/8591))
+
+**Dependency updates**
+
+- Updated `@elastic/prismjs-esql` to v1.1.0 ([#8587](https://github.com/elastic/eui/pull/8587))
+
+## [`v101.3.0`](https://github.com/elastic/eui/releases/v101.3.0)
+
+- Updated 78 existing and added two new glyphs (`code` and `checkCircle`) for `EuiIcon` ([#8530](https://github.com/elastic/eui/pull/8530))
+- Changed `gutterSize` to `m` between right side items on `EuiPageHeader` ([#8529](https://github.com/elastic/eui/pull/8529))
+
+**Bug fixes**
+
+- Fixed a visual bug on disabled `EuiButton` in high contrast mode where wrong text colors were applied ([#8550](https://github.com/elastic/eui/pull/8550))
+
+## [`v101.2.0`](https://github.com/elastic/eui/releases/v101.2.0)
+
+- Added `showToolTip` prop on `EuiColorPickerSwatch` ([#8512](https://github.com/elastic/eui/pull/8512))
+
+**Bug fixes**
+
+- Fixed a visual issue of overlapping borders for layered `EuiPanel`s ([#8519](https://github.com/elastic/eui/pull/8519))
+- Fixes wrong `colorMode` styling for the search in `EuiHeader` with `theme="dark"` ([#8496](https://github.com/elastic/eui/pull/8496))
+
+**Accessibility**
+
+- Improved the accessibility of `EuiColorPicker` by adding color label tooltips on hover and focus for color swatches ([#8512](https://github.com/elastic/eui/pull/8512))
+- Added `disableScreenReaderOutput` prop on `EuiToolTip` to manually control if the tooltip content should be read when focusing the trigger. This prevents duplicate screen reader output when the tooltip content and `aria-label` on the trigger element have the same text content. ([#8508](https://github.com/elastic/eui/pull/8508))
+- Improves text color contrast for `EuiButton` with `color="warning"` in high contrast mode ([#8496](https://github.com/elastic/eui/pull/8496))
+- Improves contrast and visible distinction of the following components in high contrast mode: ([#8496](https://github.com/elastic/eui/pull/8496))
+  - `EuiCode`
+  - `EuiBadge`
+  - `EuiBetaBadge`
+  - `EuiNotificationBadge`
+
+**Dependency updates**
+
+- Updated `prismjs` to v1.30.0 ([#8506](https://github.com/elastic/eui/pull/8506))
+
 ## [`v101.1.0`](https://github.com/elastic/eui/releases/v101.1.0)
 
 - Updates `EuiTableRow` styles to check support for `:has(+)` selector ([#8498](https://github.com/elastic/eui/pull/8498))

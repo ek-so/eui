@@ -14,6 +14,14 @@ import type { Options as EuiPresetOptions } from '@elastic/eui-docusaurus-preset
 const baseUrl = process.env.DOCS_BASE_URL || '/';
 const googleTagManagerId = process.env.DOCS_GOOGLE_TAG_MANAGER_ID || undefined;
 
+let storybookBaseUrl: string = 'https://eui.elastic.co/storybook';
+
+if (process.env.NODE_ENV === 'development') {
+  storybookBaseUrl = 'http://localhost:6006';
+} else if (process.env.STORYBOOK_BASE_URL) {
+  storybookBaseUrl = process.env.STORYBOOK_BASE_URL;
+}
+
 const config: Config = {
   title: 'Elastic UI Framework',
   tagline: 'The framework powering the Elastic Stack',
@@ -37,6 +45,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  customFields: {
+    storybookBaseUrl,
+  },
+
   presets: [
     [
       require.resolve('@elastic/eui-docusaurus-preset'),
@@ -44,6 +56,10 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/elastic/eui/tree/main/packages/website/',
+          admonitions: {
+            keywords: ['accessibility'],
+            extendDefaults: true,
+          },
         },
         blog: {
           showReadingTime: true,
@@ -52,7 +68,7 @@ const config: Config = {
         googleTagManager: googleTagManagerId && {
           containerId: googleTagManagerId,
         },
-      } satisfies EuiPresetOptions
+      } satisfies EuiPresetOptions,
     ],
   ],
 
@@ -75,9 +91,21 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
+          sidebarId: 'getting-started',
+          position: 'left',
+          label: 'Getting started',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'components',
           position: 'left',
           label: 'Components',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'utilities',
+          position: 'left',
+          label: 'Utilities',
         },
         {
           type: 'docSidebar',
