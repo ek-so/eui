@@ -13,7 +13,6 @@ import { FigmaEmbed } from '../../components/figma_embed';
 import { Demo, DemoSource } from '../../components/demo';
 import { PropTable } from '../../components/prop_table';
 import { ListItem } from './ListItem';
-import { Blockquote } from './Blockquote';
 import { Paragraph } from './Paragraph';
 import { UnorderedList } from './UnorderedList';
 import { OrderedList } from './OrderedList';
@@ -26,7 +25,6 @@ const MDXComponents = {
   li: ListItem,
   ul: UnorderedList,
   ol: OrderedList,
-  blockquote: Blockquote,
 
   // Custom components
   Badge,
