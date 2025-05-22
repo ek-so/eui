@@ -72,6 +72,12 @@ yarn start
 
 ### Website
 
+If running for the first time, it's mandatory to build all local dependency packages:
+
+```
+yarn workspace @elastic/eui-website build:workspaces
+```
+
 You can run the documentation locally at [http://localhost:3000/](http://localhost:3000/) with the following command:
 
 ```shell
