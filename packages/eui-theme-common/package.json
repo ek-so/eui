@@ -1,13 +1,13 @@
 {
   "name": "@elastic/eui-theme-common",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "EUI theme common",
   "license": "SEE LICENSE IN LICENSE.txt",
   "scripts": {
     "build:clean": "rimraf lib/",
     "build": "yarn build:clean && yarn build:compile && yarn build:compile:cjs && yarn build:types",
     "build:compile": "tsc --project ./tsconfig.json",
-    "build:compile:cjs": "NODE_ENV=production NO_COREJS_POLYFILL=true babel src --out-dir=lib/cjs --extensions .js,.ts,.tsx --source-maps=true",
+    "build:compile:cjs": "NODE_ENV=production NO_COREJS_POLYFILL=true babel src --out-dir=lib/cjs --extensions .js,.ts,.tsx",
     "build:types": "NODE_ENV=production tsc --project tsconfig.types.json",
     "build-pack": "yarn build && npm pack",
     "lint": "yarn tsc --noEmit && yarn lint-es && yarn lint-sass",
