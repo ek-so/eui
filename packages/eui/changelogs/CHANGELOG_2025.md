@@ -1,3 +1,83 @@
+## [`v104.1.0`](https://github.com/elastic/eui/releases/v104.1.0)
+
+- Added new component token `components.forms.codeInlineBackground` ([#8813](https://github.com/elastic/eui/pull/8813))
+- Updated background color for `EuiCode` to use `components.forms.codeInlineBackground` ([#8813](https://github.com/elastic/eui/pull/8813))
+- Added `noItemsMessage` prop to `EuiInMemoryTable` ([#8812](https://github.com/elastic/eui/pull/8812))
+- Added prop `delimiter` on `EuiDatePickerRange` ([#8810](https://github.com/elastic/eui/pull/8810))
+
+**Bug fixes**
+
+- Fixed an issue with `EuiSuperDatePicker` where toggling `isQuickSelectOnly` would cause a full re-render when the selected range uses absolute dates ([#8810](https://github.com/elastic/eui/pull/8810))
+
+**Deprecations**
+
+- Deprecated `message` prop in `EuiInMemoryTable` in favor of `noItemsMessage` which is a more meaningful prop name; there are no functional changes ([#8812](https://github.com/elastic/eui/pull/8812))
+
+## [`v104.0.2`](https://github.com/elastic/eui/releases/v104.0.2)
+
+**Bug fixes**
+
+- Fixed missing JSON token exports for `euiColorBackgroundBaseInteractiveSelectHover` and `euiColorBorderStrongText` ([#8819](https://github.com/elastic/eui/pull/8819))
+
+## [`v104.0.1`](https://github.com/elastic/eui/releases/v104.0.1)
+
+**Bug fixes**
+
+- Fixed a wrong path in the module declaration for the JSON token exports that would trigger typescript errors ([#8818](https://github.com/elastic/eui/pull/8818))
+
+## [`v104.0.0`](https://github.com/elastic/eui/releases/v104.0.0)
+
+- Added data vis text color tokens: ([#8793](https://github.com/elastic/eui/pull/8793))
+  - `colors.vis.euiColorVisText0`
+  - `colors.vis.euiColorVisText1`
+  - `colors.vis.euiColorVisText2`
+  - `colors.vis.euiColorVisText3`
+  - `colors.vis.euiColorVisText4`
+  - `colors.vis.euiColorVisText5`
+  - `colors.vis.euiColorVisText6`
+  - `colors.vis.euiColorVisText7`
+  - `colors.vis.euiColorVisText8`
+  - `colors.vis.euiColorVisText9`
+- Updated and aligned background hover styles for `EuiTable` and `EuiDataGrid` ([#8769](https://github.com/elastic/eui/pull/8769))
+
+**Deprecations**
+
+- Deprecated `euiPaletteForLightBackground` and `euiPaletteForDarkBackground` palettes. Use the newly added data vis color tokens instead. ([#8793](https://github.com/elastic/eui/pull/8793))
+
+**Breaking changes**
+
+- Removed tokens: ([#8793](https://github.com/elastic/eui/pull/8793))
+  - `colors.vis.euiColorVisAsTextLight1`
+  - `colors.vis.euiColorVisAsTextLight0`
+  - `colors.vis.euiColorVisAsTextLight2`
+  - `colors.vis.euiColorVisAsTextLight3`
+  - `colors.vis.euiColorVisAsTextLight4`
+  - `colors.vis.euiColorVisAsTextLight5`
+  - `colors.vis.euiColorVisAsTextLight6`
+  - `colors.vis.euiColorVisAsTextDark1`
+  - `colors.vis.euiColorVisAsTextDark0`
+  - `colors.vis.euiColorVisAsTextDark2`
+  - `colors.vis.euiColorVisAsTextDark3`
+  - `colors.vis.euiColorVisAsTextDark4`
+  - `colors.vis.euiColorVisAsTextDark5`
+  - `colors.vis.euiColorVisAsTextDark6`
+- Removed `xl` size from `EuiTabs` ([#8762](https://github.com/elastic/eui/pull/8762))
+- Added `tooltipProps` to `EuiCopy` which replaces spreading all props to `EuiToolTip` ([#8758](https://github.com/elastic/eui/pull/8758))
+
+## [`v103.1.0`](https://github.com/elastic/eui/releases/v103.1.0)
+
+- Added `onFullScreenChange` prop to `EuiDataGrid` to handle changes when the component enters or exits fullscreen mode ([#8765](https://github.com/elastic/eui/pull/8765))
+
+**Bug fixes**
+
+- Fixed `onChange` being triggered twice when the checkbox in `EuiCheckableCard` is clicked ([#8786](https://github.com/elastic/eui/pull/8786))
+- Fixed a circular import on the legacy Amsterdam theme that would cause the theme usage to break ([#8780](https://github.com/elastic/eui/pull/8780))
+- Fixed high contrast theme token overrides not being applied ([#8742](https://github.com/elastic/eui/pull/8742))
+
+**Accessibility**
+
+- Fixed form errors not being read by screen readers for `EuiComboBox` inside of `EuiFormRow` ([#8798](https://github.com/elastic/eui/pull/8798))
+
 ## [`v103.0.0`](https://github.com/elastic/eui/releases/v103.0.0)
 
 - Replaced `question` icon glyph ([#8756](https://github.com/elastic/eui/pull/8756))
