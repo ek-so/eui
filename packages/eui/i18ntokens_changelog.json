@@ -1,5 +1,117 @@
 [
   {
+    "version": "106.1.0",
+    "changes": [
+      {
+        "token": "euiMarkdownEditorFooter.showMarkdownHelp",
+        "changeType": "deleted"
+      },
+      {
+        "token": "euiMarkdownEditorFooter.syntaxTitle",
+        "changeType": "deleted"
+      },
+      {
+        "token": "euiMarkdownEditorFooter.mdSyntaxLink",
+        "changeType": "deleted"
+      },
+      {
+        "token": "euiMarkdownEditorFooter.syntaxModalDescriptionPrefix",
+        "changeType": "deleted"
+      },
+      {
+        "token": "euiMarkdownEditorFooter.syntaxModalDescriptionSuffix",
+        "changeType": "deleted"
+      },
+      {
+        "token": "euiMarkdownEditorFooter.closeButton",
+        "changeType": "deleted"
+      },
+      {
+        "token": "euiMarkdownEditorFooter.syntaxPopoverDescription",
+        "changeType": "deleted"
+      },
+      {
+        "token": "euiMarkdownEditorHelpButton.mdSyntaxLink",
+        "changeType": "added",
+        "value": "GitHub flavored markdown"
+      },
+      {
+        "token": "euiMarkdownEditorHelpButton.syntaxTitle",
+        "changeType": "added",
+        "value": "Syntax help"
+      },
+      {
+        "token": "euiMarkdownEditorHelpButton.showMarkdownHelp",
+        "changeType": "added",
+        "value": "Show markdown help"
+      },
+      {
+        "token": "euiMarkdownEditorHelpButton.syntaxModalDescriptionPrefix",
+        "changeType": "added",
+        "value": "This editor uses"
+      },
+      {
+        "token": "euiMarkdownEditorHelpButton.syntaxModalDescriptionSuffix",
+        "changeType": "added",
+        "value": "You can also utilize these additional syntax plugins to add rich content to your text."
+      },
+      {
+        "token": "euiMarkdownEditorHelpButton.closeButton",
+        "changeType": "added",
+        "value": "Close"
+      },
+      {
+        "token": "euiMarkdownEditorHelpButton.syntaxPopoverDescription",
+        "changeType": "added",
+        "value": "This editor uses"
+      }
+    ]
+  },
+  {
+    "version": "106.0.0",
+    "changes": [
+      {
+        "token": "euiFlyout.screenReaderFixedHeaders",
+        "changeType": "deleted"
+      },
+      {
+        "token": "euiFlyout.screenReaderFocusTrapShards",
+        "changeType": "added",
+        "value": "You can still continue tabbing through other global page landmarks."
+      }
+    ]
+  },
+  {
+    "version": "104.1.0",
+    "changes": [
+      {
+        "token": "euiSaturation.ariaLabel",
+        "changeType": "modified",
+        "value": "Select a color"
+      },
+      {
+        "token": "euiSaturation.roleDescription",
+        "changeType": "added",
+        "value": "HSV color mode saturation and value 2-axis slider."
+      },
+      {
+        "token": "euiHue.ariaValueText",
+        "changeType": "added",
+        "value": "Hue"
+      },
+      {
+        "token": "euiHue.ariaRoleDescription",
+        "changeType": "added",
+        "value": "Hue slider"
+      },
+      {
+        "token": "euiColorPicker.selectedColorLabel",
+        "changeType": "added",
+        "value": "Selected color"
+      }
+    ]
+  },
+  {
     "version": "98.2.0",
     "changes": [
       {

@@ -131,6 +131,21 @@ It's worth pointing out that although the examples provided are specific to EUI 
 
 Ensures that EUI modal components (`EuiModal`, `EuiFlyout`, `EuiConfirmModal`) have either an `aria-label` or `aria-labelledby` prop for accessibility. This helps screen reader users understand the purpose and content of modal dialogs.
 
+### `@elastic/eui/consistent-is-invalid-props`
+
+Ensures that form control components within `EuiFormRow` components have matching `isInvalid` prop values. This maintains consistent validation state between parent form rows and their child form controls, leading to a more predictable and accessible user experience.
+
+### `@elastic/eui/sr-output-disabled-tooltip`
+
+Ensures `disableScreenReaderOutput` is set when `EuiToolTip` content matches `EuiButtonIcon` "aria-label".
+
+### `@elastic/eui/prefer-eui-icon-tip`
+
+Ensure `EuiIconTip` is used rather than `<EuiToolTip><EuiIcon/></EuiToolTip>`, as it provides better accessibility and improved support for assistive technologies.
+
+### `@elastic/eui/no-unnamed-radio-group`
+
+Ensure that all radio input components (`EuiRadio`, `EuiRadioGroup`) have a `name` attribute. The `name` attribute is required for radio inputs to be grouped correctly, allowing users to select only one option from a set. Without a `name`, radios may not behave as expected and can cause accessibility issues for assistive technologies.
 
 ## Testing
 
