@@ -1,3 +1,49 @@
+## [`v6.0.0`](https://github.com/elastic/eui/releases/v6.0.0)
+
+**Breaking changes**
+
+- Removed `euiTheme.flags.hasGlobalFocusColor` ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed `euiTheme.flags.hasVisColorAdjustment` ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed `hasVisColorAdjustment` argument from `EuiVisColorStore` ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed `euiTheme.flags.buttonVariant` and `euiTheme.flags.formVariant` ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed type for `euiTheme.components.keyPadMenuItemBackgroundDisabledSelect` ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed outdated component-specific mixin SCSS files: ([#9090](https://github.com/elastic/eui/pull/9090))
+  - `src/global_styling/mixins/_button.scss`
+  - `src/global_styling/mixins/_form.scss`
+  - `src/global_styling/mixins/_link.scss`
+  - `src/global_styling/mixins/_loading.scss`
+  - `src/global_styling/mixins/_panel.scss`
+  - `src/global_styling/mixins/_range.scss`
+
+## [`v5.0.0`](https://github.com/elastic/eui/releases/v5.0.0)
+
+- Added `shadowVariant` theme flag ([#9088](https://github.com/elastic/eui/pull/9088))
+- Added new types shadow types: ([#9088](https://github.com/elastic/eui/pull/9088))
+  - `_EuiThemeShadow`
+  - `_EuiThemeShadows`
+  - `_EuiThemeShadowLayer`
+- Added `formatMultipleBoxShadow` theme function to generate box shadows from `_EuiThemeShadowLayer` definitions ([#9088](https://github.com/elastic/eui/pull/9088))
+- Updated shadow utility functions to return new tokens ([#9088](https://github.com/elastic/eui/pull/9088))
+  - `euiShadow`
+  - `euiShadowXSmall`
+  - `euiShadowSmall`
+  - `euiShadowMedium`
+  - `euiShadowLarge`
+  - `euiShadowXLarge`
+  - `euiShadowFlat`
+  - `euiSlightShadowHover`
+- Added shadow hover utility `euiShadowHover` ([#9088](https://github.com/elastic/eui/pull/9088))
+
+**Deprecations**
+
+- Deprecated `euiShadowFlat` and `useEuiShadowFlat` - use `euiShadow`/ `useEuiShadow` (size `xs`) or `euiShadowXSmall` instead ([#9088](https://github.com/elastic/eui/pull/9088))
+- Deprecated `euiSlightShadowHover` and `useEuiSlightShadowHover` - use `euiShadowHover` / `useEuiShadowHover` instead ([#9088](https://github.com/elastic/eui/pull/9088))
+
+**Breaking changes**
+
+- Removed SCSS shadow variables and mixins (they're available on the themes directly) ([#9088](https://github.com/elastic/eui/pull/9088))
+- Updated shadow utility functions (e.g. `euiShadow`) to apply a floating border style in dark mode. This may lead to visual issues with double borders in dark mode when a regular `border` styling is applied. - Use the `options.border` argument on the utils to adjust or remove the floating border as needed. ([#9088](https://github.com/elastic/eui/pull/9088))
+
 ## [`v4.0.0`](https://github.com/elastic/eui/releases/v4.0.0)
 
 **Breaking changes**

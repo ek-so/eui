@@ -7,9 +7,9 @@
  */
 
 import { css } from '@emotion/react';
+import { euiShadowFlat } from '@elastic/eui-theme-common';
 import { UseEuiTheme } from '../../services';
 import { logicalCSS } from '../../global_styling';
-import { euiShadowFlat } from '../../themes';
 import { euiHeaderVariables } from '../header/header.styles';
 
 import { hideScrollbars } from './collapsible_nav_body_footer.styles';
@@ -39,7 +39,7 @@ export const euiCollapsibleNavBetaStyles = (euiThemeContext: UseEuiTheme) => {
       ${logicalCSS('border-left', euiTheme.border.thin)}
     `,
     isPush: css`
-      ${euiShadowFlat(euiThemeContext)}
+      ${euiShadowFlat(euiThemeContext, { border: 'none' })}
     `,
     isPushCollapsed: css`
       ${hideScrollbars}

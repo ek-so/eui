@@ -1,3 +1,87 @@
+## [`v108.0.0`](https://github.com/elastic/eui/releases/v108.0.0)
+
+- Updated `EuiModal` to support closing on outside click, via the new `outsideClickCloses` prop ([#9137](https://github.com/elastic/eui/pull/9137))
+
+**Breaking changes**
+
+- Removed all "Amsterdam" theme related code in `src/themes/amsterdam` - EUI now only supports the "Borealis" theme in `eui-theme-borealis` ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed `euiTheme.flags.hasGlobalFocusColor` ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed `euiTheme.flags.hasVisColorAdjustment` ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed `hasVisColorAdjustment` argument from color palettes (used in `euiPaletteColorBlindBehindText`, `euiPaletteForTemperature`, `euiPaletteComplementary`, `euiPaletteCool`) ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed `euiTheme.flags.buttonVariant` and `euiTheme.flags.formVariant` ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed `euiTheme.components.keyPadMenuItemBackgroundDisabledSelect` ([#9090](https://github.com/elastic/eui/pull/9090))
+- Removed legacy SCSS files from `src/global_styling/variables`, `src/global_styling/mixins` and `src/global_styling/functions` - if needed, use them from `eui-theme-common` instead ([#9090](https://github.com/elastic/eui/pull/9090))
+
+## [`v107.0.1`](https://github.com/elastic/eui/releases/v107.0.1)
+
+**Bug fixes**
+
+- Fixed `prismjs` theme in `EuiCodeBlock` to improve highlighting for the `yaml` language ([#9089](https://github.com/elastic/eui/pull/9089))
+- Fixed a visual bug on `EuiTable` where the border for rows in dark mode wasn't applied correctly ([#9115](https://github.com/elastic/eui/pull/9115))
+
+**Dependency updates**
+
+- Updated `@elastic/prismjs-esql` to v1.1.2 ([#9102](https://github.com/elastic/eui/pull/9102))
+
+**Accessibility**
+
+- Fixed incorrect role attribute on `EuiIcon` and `EuiBetaBadge` ([#9100](https://github.com/elastic/eui/pull/9100))
+- Make `EuiBasicTable` respect user's reduced motion setting by not animating when in loading state. ([#9095](https://github.com/elastic/eui/pull/9095))
+
+## [`v107.0.0`](https://github.com/elastic/eui/releases/v107.0.0)
+
+- Added new shadow tokens ([#9088](https://github.com/elastic/eui/pull/9088))
+  - `shadows.colors.base`
+  - `shadows.xs`
+  - `shadows.s`
+  - `shadows.m`
+  - `shadows.l`
+  - `shadows.xl`
+  - `shadows.flat`
+  - `shadows.hover.base`
+  - `shadows.hover.xl`
+- Updated shadow utility functions to return new tokens ([#9088](https://github.com/elastic/eui/pull/9088))
+  - `euiShadow`
+  - `euiShadowXSmall`
+  - `euiShadowSmall`
+  - `euiShadowMedium`
+  - `euiShadowLarge`
+  - `euiShadowXLarge`
+  - `euiShadowFlat`
+  - `euiSlightShadowHover`
+- Added shadow hover utility `euiShadowHover` ([#9088](https://github.com/elastic/eui/pull/9088))
+
+**Deprecations**
+
+- Deprecated `euiShadowFlat` and `useEuiShadowFlat` - use `euiShadow`/ `useEuiShadow` (size `xs`) or `euiShadowXSmall` instead ([#9088](https://github.com/elastic/eui/pull/9088))
+- Deprecated `euiSlightShadowHover` and `useEuiSlightShadowHover` - use `euiShadowHover` / `useEuiShadowHover` instead ([#9088](https://github.com/elastic/eui/pull/9088))
+
+**Breaking changes**
+
+- Updated shadow utility functions (e.g. `euiShadow`) to apply a floating border style in dark mode. This may lead to visual issues with double borders in dark mode when a regular `border` styling is applied. - Use the `options.border` argument on the utils to adjust or remove the floating border as needed. ([#9088](https://github.com/elastic/eui/pull/9088))
+
+## [`v106.7.0`](https://github.com/elastic/eui/releases/v106.7.0)
+
+- Updated `EuiComboBox` to properly break long strings without spaces when `rowHeight="auto"` ([#9063](https://github.com/elastic/eui/pull/9063))
+- Added `data-test-subj` support to `EuiDatePicker` and `EuiDatePickerRange` for improved testability. Propagates to main component wrappers, inputs, clear buttons, calendar navigation, and popover panels. ([#9042](https://github.com/elastic/eui/pull/9042))
+- Added streamsClassic and streamsWired icons ([#9017](https://github.com/elastic/eui/pull/9017))
+- Updated icons based on feedback: `boxesVertical`, `documentation`, `error`, `export`, `filter`, `filterExclude`, `filterIgnore`, `filterInclude`, `grab`, `grabOmnidirectional`, `grabHorizontal`, `importAction`, `indexTemporary`, `link`, `list`, `magnifyWithExclamation`, `magnifyWithMinus`, `magnifyWithPlus`, `minus`, `minusInCircle`, `pencil`, `pin`, `pinFilled`, `plus`, `plusInCircle`, `question`, `search`, `sortLeft`, `sortRight`, `sortDown`, `sortUp`, `sortable`, `unlink`. ([#9026](https://github.com/elastic/eui/pull/9026))
+- Added new icon: `backgroundTask`. ([#9026](https://github.com/elastic/eui/pull/9026))
+- Marked icons for deprecation: `boxesHorizontal`, `checkInCircleFilled`, `copyClipboard`, `documentEdit`, `errorFilled`, `expandMini`, `filterInCircle`, `lettering`, `listAdd`, `minusInCircleFilled`, `newChat`, `playFilled`, `plusInCircleFilled`, `submodule`, `tableDensityNormal`, `warningFilled`. ([#9026](https://github.com/elastic/eui/pull/9026))
+- Added `workflowsApp` icon ([#9011](https://github.com/elastic/eui/pull/9011))
+- Added `EuiFormControlButton` component for usage as input-styled button within `EuiFormControlLayout` ([#9006](https://github.com/elastic/eui/pull/9006))
+- Updated `EuiSuperDatePicker` to use `EuiFormControlButton` when a prettified duration button is rendered ([#9006](https://github.com/elastic/eui/pull/9006))
+
+**Bug fixes**
+
+- Fixed `EuiInMemoryTable` not firing the `search.onChange` callback when `searchFormat` equals `text`. ([#9059](https://github.com/elastic/eui/pull/9059))
+- Fixed `columns` in `EuiDataGrid` not being rendered in the correct order as defined by `columnVisibility.visibleColumns` which resulted in unexpected updates when reordering columns ([#9030](https://github.com/elastic/eui/pull/9030))
+
+**Accessibility**
+
+- Improved color contrast of non-interactive `EuiBreadcrumbs` items in dark mode ([#9071](https://github.com/elastic/eui/pull/9071))
+- Make `EuiProgress` respect user's reduced motion setting by not animating when in indeterminite state. ([#9054](https://github.com/elastic/eui/pull/9054))
+
 ## [`v106.6.0`](https://github.com/elastic/eui/releases/v106.6.0)
 
 **Accessibility**
